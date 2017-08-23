@@ -22,7 +22,7 @@
 		var name2 = prompt("2 игрок введите своё имя");
 		var mysteryWord = prompt (name1 + " введите загаданное слово");
 		var word = [];
-		for (var i = 0; i < mysteryWord; i++) {
+		for (var i = 0; i < mysteryWord.length; i++) {
 			word.push("_");
 		}
 		var remLetters = mysteryWord.length;
