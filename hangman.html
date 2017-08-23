@@ -26,6 +26,8 @@
 			word.push("_");
 		}
 		var remLetters = 0;
+		while(remLetters < 9) {
+
 			var guess = prompt(word.join(" ") + "Ошибок: " + remLetters + name2 + " Ваше предположение");
 			if (guess === null) {
 				break;
@@ -40,6 +42,7 @@
 					}
 				}
 			}
+		}
 		if(word.join("") === mysteryWord) {
 			var wins = " вы отгадали это слово "
 		} else {
