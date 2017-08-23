@@ -27,7 +27,7 @@
 		}
 		var remLetters = mysteryWord.length;
 		while(remLetters > 0) {
-			var guess = prompt(word.join(" ") + name2 + " Ваше предположение");
+			var guess = prompt(word.join(" ") + "Ошибок: " + remLetters + name2 + " Ваше предположение");
 			if (guess === null) {
 				break;
 			} else if (guess.length !== 1) {
@@ -36,7 +36,8 @@
 				for (var j = 0; j < mysteryWord.length; j++) {
 					if (mysteryWord[j] === guess) {
 						word[j] = guess;
-					remLetters--;
+					} else {
+						remLetters--;
 					}
 				}
 			}
@@ -48,7 +49,7 @@
 		}
 		alert("Отлично " + name2 + wins + mysteryWord);
 	} else {
-		alert ("Ну что нажимай крестик вверху^ ^ ^");
+		break;
 	}
 	</script>
 </body> 
