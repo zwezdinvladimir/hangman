@@ -27,7 +27,7 @@
 		}
 		var remLetters = mysteryWord.length;
 		while(remLetters > 0) {
-			var guess = prompt(word.join(" ") + " Ваше предположение");
+			var guess = prompt(word.join(" ") + name2 + " Ваше предположение");
 			if (guess === null) {
 				break;
 			} else if (guess.length !== 1) {
@@ -41,6 +41,12 @@
 				}
 			}
 		}
+		if(word.join("") === mysteryWord) {
+			var wins = " вы отгадали это слово "
+		} else {
+			var wins = " вы не отгадали было загадано слово "
+		}
+		alert("Отлично " + name2 + wins + mysteryWord);
 	} else {
 		alert ("Ну что нажимай крестик вверху^ ^ ^");
 	}
