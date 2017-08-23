@@ -25,8 +25,7 @@
 		for (var i = 0; i < mysteryWord.length; i++) {
 			word.push("_");
 		}
-		var remLetters = mysteryWord.length;
-		while(remLetters > 0) {
+		for (var u = 9; u > 0; u--){
 			var guess = prompt(word.join(" ") + name2 + " Ваше предположение");
 			if (guess === null) {
 				break;
