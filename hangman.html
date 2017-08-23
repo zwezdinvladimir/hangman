@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-	<title>Моя настоящая HTML-страничка</title>
+	<title>Виселица</title>
 </head>
 
 
@@ -27,7 +27,7 @@
 		}
 		var remLetters = mysteryWord.length;
 		while(remLetters > 0) {
-			var guess = prompt(" Ваше предположение");
+			var guess = prompt(word.join(" ") + " Ваше предположение");
 			if (guess === null) {
 				break;
 			} else if (guess.length !== 1) {
@@ -39,9 +39,6 @@
 						remLetters--;
 					}
 				}
-			alert(word.join(""));
-			console.log(word);
-			console.log(mysteryWord);
 			}
 		}
 	} else {
