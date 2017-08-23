@@ -20,26 +20,33 @@
 	if (start) {
 		var name1 = prompt("1 игрок введите своё имя");
 		var name2 = prompt("2 игрок введите своё имя");
-		var mysteryWord = prompt (name1 + " введите загаданное слово");
+		var mystWord = prompt (name1 + " введите загаданное слово");
 		var word = [];
+		var mysteryWord = mystWord.toLowerCase();
 		for (var i = 0; i < mysteryWord.length; i++) {
 			word.push("_");
 		}
 		var remLetters = 0;
-		for(var i = 0; i < 9; i++) {
+		for(var o = 0; remLetters < 9; o++) {
 
 			var guess = prompt(word.join(" ") + "Ошибок: " + remLetters + " " + name2 + " Ваше предположение");
 			if (guess === null) {
 				break;
 			} else if (guess.length !== 1) {
 				alert("Пожалуйста введите только одну букву.");
+			} else if (word) {
+
 			} else {
 				for (var j = 0; j < mysteryWord.length; j++) {
+					var k = 0
 					if (mysteryWord[j] === guess) {
 						word[j] = guess;
-					} else {
-						remLetters += 1;
-					}
+						k++;
+					} 
+					
+				}
+				if (k !== 0) {
+					remLetters += 1;
 				}
 			}
 		}
