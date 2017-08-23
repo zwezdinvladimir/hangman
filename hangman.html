@@ -28,7 +28,7 @@
 		var remLetters = 0;
 		while(remLetters < 9) {
 
-			var guess = prompt(word.join(" ") + "Ошибок: " + remLetters + name2 + " Ваше предположение");
+			var guess = prompt(word.join(" ") + "Ошибок: " + remLetters + " " + name2 + " Ваше предположение");
 			if (guess === null) {
 				break;
 			} else if (guess.length !== 1) {
@@ -38,7 +38,7 @@
 					if (mysteryWord[j] === guess) {
 						word[j] = guess;
 					} else {
-						remLetters++;
+						remLetters += 1;
 					}
 				}
 			}
